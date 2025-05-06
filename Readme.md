@@ -138,3 +138,35 @@ Para detalhes sobre o portscanner ler o seguinte arquivo: [portscanner.md](Ports
 
 - [documentação gethostbyname](https://pythontic.com/modules/socket/gethostbyname)
 - [Inspiração para word list](https://raw.githubusercontent.com/danTaler/WordLists/refs/heads/master/Subdomain.txt)
+
+# Exemplos de Teste
+
+caso esteja fazendo um peintest no insper:
+
+Para fazer um Portscan
+
+```
+1
+insper.edu.br
+```
+
+Para fazer um whois:
+
+```
+2
+insper.edu.br
+```
+
+para fazer um DNS Enumeration
+
+```
+4
+insper.edu.br
+```
+
+Para fazer um http header fetcher
+
+```
+5
+insper.edu.br
+```
