@@ -1,3 +1,23 @@
+# Pergutas
+
+## 1 Além do PortScan, quais são as 5 ferramentas mais úteis para reconhecimento em um pentest?
+
+As ferrementas mais uteis são whois loookup, dns enumeration, subdomain scanner, nikto e scan de vulnerabilidades como nmap. O whois é uma ferramenta importante para encontrar relações de uma pessoa com um site. Em aula o Avelino contou quando ele expos um grupo que tinha feito um site ilegal rastrenando outros sites pelo dns que esse grupo havia feito e mostrando a conecção da pessoa com o site pelo whois.
+
+## 2 Qual a diferença entre um scanner de portas SYN e um TCP Connect Scan?
+
+O TCP connect uma conecção completa enquanto o SYN scan apenas envia pacotes syn permetindo uma varredura mais discreta. A principal diferença é que o SYN não finaliza a coneção
+
+## 3 Como um pentester pode evitar ser detectado por sistemas de prevenção de intrusão (IPS) durante o reconhecimento?
+
+O paintester pode evitar o reconhecimento usando tecnincas que deixam o ataque mais discreto como:
+
+- Utilização de VPNs encaminhado cada requisição por um ip diferente. Com a diversidade de Ips o ip do pentester é  ocultado e dificulta a detecção.  Impacta o tempo do scan adicionando um overhead porque tera que conectar com cada vpn antes de fazer o scan mas não a eficácia a não ser que você coloque uma vpn para um local onde o servidor não atende ou barre requisições como no caso que o Avelino trouxe em aula de que estava sofrendo um ataque DOS ele combateu so permitindo conecções do Brasil.
+- Utilização da rede TOR. Novamente como ela encaminha trafego por  ips intermediario (as maquinas da rede interna do tor) é ocultado o ip do pentester. Impacta a o tempo do scan adicionando overhead que é o tempo de transmitir a requisição dentro da rede TOR mas não a eficacia
+- Ajustar o tempo entre requisições. Aumentando o tempo entre requisições pode fazer com que tenha menos logs seguidos o que pode deixar o ataque mais discreto. Aumenta o tempo do scan mas não a eficacia.
+- Scan mais furtivos como o SYN . Onde não finaliza a conecção ou seja não envia o ACK o que tem o impoacto de deixar mais rápido mas apenas ve se a porta esta aberta ou fechada.
+- Fazer um reconhecimento sem tocar no alvo, usando whois, dns .
+
 # App Reconhecimento do Alvo
 
 ## Descrição
@@ -98,6 +118,10 @@ Para detalhes sobre arquitetura, decisões de design, e estrutura do projeto, co
 Para detalhes sobre o portscanner ler o seguinte arquivo: [portscanner.md](Portscanner.md)
 
 ## Referencias
+
+## Pergunta 2
+
+- [syn e tcp](<https://forense.io/glossario/o-que-e-port-scanning-e-sua-importancia-na-seguranca/#:~:text=O%20TCP%20Connect%2C%20por%20exemplo,permitindo%20uma%20varredura%20mais%20discreta>.)
 
 ### Whois
 
